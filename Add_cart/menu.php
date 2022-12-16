@@ -9,7 +9,7 @@
 
 <body>
     
-  <nav class="p-5 shadow md:flex md:items-center md:justify-between bg-black">
+  <nav class="p-5 shadow md:flex md:items-center md:justify-between bg-black relative sticky w-full">
     <div class="flex justify-between items-center ">
       <span class="text-2xl font-[Poppins] cursor-pointer">
         <img class="h-10 inline"

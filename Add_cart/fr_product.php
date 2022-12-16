@@ -21,7 +21,7 @@ include 'condb.php';
         </div>
                 <form name="form1" method="post" action="insert_product.php" enctype="multipart/form-data">
                     <label class="block text-white text-l font-bold m-2">ชื่อสินค้า :</label>
-                    <input type="text" name="pname" class="from-control rounded-lg w-full" placeholder="ชื่อสินค้า..." required>
+                    <input type="text" name="pname" class="from-control rounded-lg w-full caret-pink-500" placeholder="ชื่อสินค้า..." required>
                     <label class="block text-white text-l font-bold m-2">ประเภทสินค้า :</label>
 
                     <select class="form-select w-full rounded-lg py-2 px-2"  name="TypeID">

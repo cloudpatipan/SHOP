@@ -12,29 +12,20 @@
 <body>
     <?php include 'menu.php'; ?>
     <div class="container mx-auto">
-        <div class="grid grid-cols-4 mx-40 mt-4 ">
+        <div class="grid grid-cols-4 mx-48 mt-4 mb-4">
             <?php
             include 'condb.php';
-          //คำสั่งแบ่งหน้าเพจ
-          $perpage = 8;
-          if(isset($_GET['page'])){
-            $page = $_GET['page'];
 
-          }else{
-            $page = 1;
-          }
-          $start = ($page -1) * $perpage;
-
-            //คำสั่งเแสงข้อมูล
-            $sql = "SELECT * FROM product ORDER BY pro_id limit {$start}, {$perpage} ";
+            //คำสั่งเแสดงข้อมูล
+            $sql = "SELECT * FROM product ";
             $hand = mysqli_query($conn,$sql);
             while($row=mysqli_fetch_array( $hand )){
             $price = $row['price'];
 
             ?>
 
-<div class="mb-4 bg-black text-white object-fill w-64 min-h-[5-rem] shadow-lg rounded-md overflow-hidden transition ease-in-out delay-150 bg-black hover:-translate-x-1 hover:scale-105 duration-300 ">
-      <img class="w-64 h-60 object-cover" src="img/<?=$row['image']?>" alt="">
+<div class="mb-4 bg-black text-white object-fill w-64 min-h-[5-rem] shadow-lg rounded-lg overflow-hidden transition ease-in-out delay-150 bg-black hover:-translate-x-1 hover:scale-105 duration-300 overflow-visible">
+      <img class="w-64 h-60 object-cover rounded-lg" src="img/<?=$row['image']?>" alt="">
 
       <div class="p-5 flex-col gap3">
         <span class="badge px-3 py-1 rounded-full text-xs bg-rose-600">มีสินค้า</span>
@@ -43,7 +34,7 @@
             <h2 class=" product-title font-bold text-2xl overflow-ellipsis whitespace-nowrap">
           <?=$row['pro_id']?>
           </h2>
-          <h2 class="product-title font-bold text-xl overflow-ellipsis whitespace-nowrap">
+          <h2 class="product-title uppercase font-bold text-xl overflow-hidden">
           <?=$row['pro_name']?>
           </h2>
             
@@ -65,26 +56,6 @@
 
             ?>
         </div>
-
-        <?php
-        $sql1 ="SELECT * FROM product ";
-        $query1= mysqli_query($conn,$sql1);
-        $total_record = mysqli_num_rows($query1);
-        $total_page = ceil($total_record / $perpage );
-        ?>
-
-        <nav aria-lable="Page navigation example">
-          <ul class="pagition">
-              <li class="page-item"><a class="page-link" href="show_product">Previous</a></li>
-              <?php for($i=1;$i<=$total_page;$i++) {?>
-              <li class="page-item"><a class="page-link" href="show_product.php?page=<?=$i?>"><?=$i?></a></li>
-              <?php } ?>
-              <li class="page-item"><a class="page-link" href="show_product.php?page=<?=$total_page?>">Next</a></li>
-          </ul>
-
-        </nav>
-
-        <?php mysqli_close($conn); ?>
 
     </div>
 

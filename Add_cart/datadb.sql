@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2022 at 07:09 AM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Generation Time: Dec 16, 2022 at 09:54 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -52,7 +52,12 @@ INSERT INTO `product` (`pro_id`, `pro_name`, `type_id`, `price`, `amount`, `imag
 (000015, 'DX BEAT CLOSER', 1, 1800, 3, 'pr_639bef56ed0ba.jpg'),
 (000016, 'DX STEAM BLADE', 1, 1400, 2, 'pr_639befaf942c9.jpg'),
 (000017, 'DX EVOL DRIVER', 1, 2200, 3, 'pr_639bf03c1d1f7.jfif'),
-(000018, 'DX GENIUS FULL BOTTLE', 1, 1300, 8, 'pr_639bf05c464bc.jfif');
+(000018, 'DX GENIUS FULL BOTTLE', 1, 1300, 8, 'pr_639bf05c464bc.jfif'),
+(000019, 'Dx Muscle Galaxy Full Bottle', 1, 3300, 4, 'pr_639c284054ae6.jpg'),
+(000020, 'DX GREAT CROSS-Z DRAGON', 1, 2300, 2, 'pr_639c28ce0158c.jpg'),
+(000022, 'DX Grease Blizzard Knuckle', 1, 3900, 2, 'pr_639c2d07f14c0.jpg'),
+(000023, 'DX Rabbit Evol Bottle & Dragon Evol Bottle Set', 1, 900, 4, 'pr_639c2db6da8bc.jpg'),
+(000024, 'Dx Perfect Kingdom', 1, 2900, 1, 'pr_639c3084c6182.jpg');
 
 -- --------------------------------------------------------
 
@@ -99,7 +104,7 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `pro_id` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT COMMENT 'รหัสสินค้า', AUTO_INCREMENT=19;
+  MODIFY `pro_id` int(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT COMMENT 'รหัสสินค้า', AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `type`
