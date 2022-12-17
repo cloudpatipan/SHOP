@@ -26,9 +26,9 @@ include 'condb.php';
 
                     <select class="form-select w-full rounded-lg py-2 px-2"  name="TypeID">
                     <?php
-                    $sql="SELECT * FROM type ORDER BY type_name";
-                    $hand=mysqli_query($conn,$sql);
-                    while($row=mysqli_fetch_array($hand)){
+                    $sql1="SELECT * FROM type ORDER BY type_name";
+                    $hand1=mysqli_query($conn,$sql1);
+                    while($row=mysqli_fetch_array($hand1)){
                     ?>
                     <option value="<?=$row['type_id']?>" class="rounded_lg"><?=$row['type_name']?></option>
                     <?php
@@ -38,6 +38,8 @@ include 'condb.php';
 
                     </select>
                     <br>
+                    <label class="block text-white text-sm font-bold m-2">รายละเอียด : </label>
+                    <textarea type="text" name="detail" class="from-control rounded-lg w-full" placeholder="รายละเอียด..." required></textarea> <br>
                     <label class="block text-white text-sm font-bold m-2">ราคา :</label>
                     <input type="text" name="price" class="from-control rounded-lg w-full" placeholder="ราคาสินค้า..." required> <br>
                     <label class="block text-white text-sm font-bold m-2">จำนวน :</label>

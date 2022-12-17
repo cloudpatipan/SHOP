@@ -2,6 +2,7 @@
 include 'condb.php' ;
 $p_name = $_POST['pname'];
 $TypeID = $_POST['TypeID'];
+$Detail = $_POST['detail'];
 $price = $_POST['price'];
 $num = $_POST['num'];
 
@@ -14,8 +15,8 @@ if(is_uploaded_file($_FILES['fileupload']['tmp_name'])){
     }
 
     //คำสั่งเพิ่มข้อมูลในตาราง Product
-$sql="INSERT INTO product(pro_name,type_id,price,amount,image) 
-VALUES('$p_name','$TypeID','$price','$num','$new_image_name')";
+$sql="INSERT INTO product(pro_name,type_id,detail,price,amount,image) 
+VALUES('$p_name','$TypeID','$Detail','$price','$num','$new_image_name')";
 $result=mysqli_query($conn,$sql);
 if($result){
     echo "<script> alert('บันทึกข้อมูลเรียบร้อย'); </script>" ;

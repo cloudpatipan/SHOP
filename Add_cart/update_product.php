@@ -3,6 +3,7 @@ include 'condb.php';
 $proid = $_POST['proid'];
 $proname = $_POST['pname'];
 $typeid = $_POST['TypeID'];
+$Detail = $_POST['detail'];
 $price = $_POST['price'];
 $num = $_POST['num'];
 $image = $_POST['textimg'];
@@ -20,6 +21,7 @@ if(is_uploaded_file($_FILES['fileupload']['tmp_name'])){
 $sql="UPDATE product SET
 pro_name = '$proname',
 type_id = '$typeid',
+detail = '$Detail',
 price = '$price',
 amount = '$num',
 image = '$new_image_name'

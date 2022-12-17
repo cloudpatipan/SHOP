@@ -30,7 +30,7 @@ $p_typeID=$rs['type_id'];
                     <label class="block text-white text-l font-bold m-2">รหัสสินค้า :</label>
                     <input type="text" name="proid" class="from-control rounded-lg w-full" readonly value=<?=$rs['pro_id']?> required>
                     <label class="block text-white text-l font-bold m-2">ชื่อสินค้า :</label>
-                    <input type="text" name="pname" class="from-control rounded-lg w-full" value=<?=$rs['pro_name']?> required>
+                    <input name="pname" class="from-control rounded-lg w-full py-2 px-2" value=<?=$rs['pro_name']?> required>
                     <label class="block text-white text-l font-bold m-2">ประเภทสินค้า :</label>
 
                     <select class="form-select w-full rounded-lg py-2 px-2"  name="TypeID">
@@ -49,13 +49,15 @@ $p_typeID=$rs['type_id'];
 
                     </select>
                     <br>
+                    <label class="block text-white text-sm font-bold m-2">รายละเอียด : </label>
+                    <textarea type="text" name="detail" class="from-control rounded-lg w-full" value=<?=$rs['detail']?> ></textarea>
                     <label class="block text-white text-sm font-bold m-2">ราคา :</label>
                     <input type="text" name="price" class="from-control rounded-lg w-full" value=<?=$rs['price']?> >
                     <label class="block text-white text-sm font-bold m-2">จำนวน :</label>
                     <input type="text" name="num" class="from-control rounded-lg w-full" value=<?=$rs['amount']?> >
                     <label class="block text-white text-sm font-bold m-2">รูปภาพ :</label>
                     <img src="img/<?=$rs['image']?>" width="120">
-                    <input class="rounded-lg border-2 border-black w-full text-white" type="file" name="fileupload" >
+                    <input class="rounded-lg border-2 border-black w-full text-white mt-2 bg-black" type="file" name="fileupload" >
                     <input type="hidden" name="textimg" class="from-control rounded-lg w-full" value=<?=$rs['image']?> >
 
 

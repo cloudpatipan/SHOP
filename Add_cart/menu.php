@@ -27,7 +27,7 @@
         <a href="#" class="text-xl hover:text-rose-600 duration-500">HOME</a>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <a href="#" class="text-xl hover:text-rose-600 duration-500">SERVICE</a>
+        <a href="#" class="text-xl hover:text-rose-600 duration-500">PRODUCT</a>
       </li>
       <li class="mx-4 my-6 md:my-0">
         <a href="#" class="text-xl hover:text-rose-600 duration-500">ABOUT</a>
@@ -39,8 +39,9 @@
         <a href="#" class="text-xl hover:text-rose-600 duration-500">BLOG'S</a>
       </li>
 
-     <form class="Search">
-    <input class="rounded-full text-center" type="text" placeholder="Search" class="...">
+     <form class="Search" method="POST" action="show_product.php">
+    <input class="rounded-full text-center text-black" type="search" name="keyword" placeholder="Search" class="...">
+    <button class="px-2 bg-rose-600 rounded-full" type="submit">ค้นหา</button>
      </form>
     
 <h2 class=""></h2>
