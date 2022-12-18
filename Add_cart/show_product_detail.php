@@ -13,27 +13,30 @@
 </head>
 <body>
     <?php include 'menu.php' ?>
-    <div class="container mx-auto">
-    <div class="grid grid-cols-2 border-4">
+    <div class="container mx-auto my-2">
+    <div class="grid grid-cols-2">
     <?php
         $proid=$_GET['id'];
         $sql = "SELECT * FROM product, type WHERE product.type_id= type.type_id and product.pro_id='$proid' ";
         $hand = mysqli_query($conn,$sql);
         $row=mysqli_fetch_array( $hand );
+        $price = $row['price'];
     ?>
      <div class="m-auto">
-     <img class="rounded-xl border-4 border-black" src="img/<?=$row['image']?>" width="400" height="450">
+     <img class="rounded-xl border-4 border-black w-80" src="img/<?=$row['image']?>">
 </div>
 
-     <div class="my-auto mx-4">
+     <div class="mr-auto my-auto mx-4">
 
-        <h2>ID : <?=$row['pro_id']?></h2>
-        <h2><?=$row['pro_name']?></h2>
-        <h2>ปนเภทสินค้า : <?=$row['type_name']?></h2>
-        <h2>รายละเอียด : <?=$row['detail']?></h2>
-        <h2>ราคา <?=$row['price']?> บาท</h2>
+        <h2 class="font-bold text-xl">ID : <?=$row['pro_id']?></h2>
+        <h2 class="text-l font-bold"><?=$row['pro_name']?></h2>
+        <h2 class="text-l font-bold">ประเภทสินค้า : <?=$row['type_name']?></h2>
+        <p class="text-l font-bold">รายละเอียด : <?=$row['detail']?></p>
+        <span class="text-l font-bold">
+        ราคา <b class="text-rose-600"> <?=number_format($price,2)?> </b> บาท
+        </span>
         <div class="mt-4">
-         <a href="show_product_detail.php?id=<?=$row['pro_id']?>" class="bg-rose-600 px-2 py-2 hover:bg-gray-600 rounded-md text-xs text-white cursor-pointer">เพิ่มลงตะกร้า</a>
+         <a href="order.php?id=<?=$row['pro_id']?>" class="bg-rose-600 px-2 py-2 hover:bg-gray-600 rounded-md text-xs text-white cursor-pointer">เพิ่มลงตะกร้า</a>
         </div>
         </div>
     </div>

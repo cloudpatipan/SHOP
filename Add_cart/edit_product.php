@@ -22,7 +22,7 @@ $p_typeID=$rs['type_id'];
 <body>
 
     <div class="container mx-auto grid h-screen place-items-center">
-        <div class="row bg-black/75 rounded-lg p-20 w-6/12 drop-shadow-2xl">
+        <div class="row bg-black rounded-lg p-20 w-6/12 drop-shadow-2xl">
         <div class="text-center text-3xl rounded-lg text-white font-bold mb-6">
             แกไขข้อมูลสินค้า
         </div>
@@ -57,7 +57,7 @@ $p_typeID=$rs['type_id'];
                     <input type="text" name="num" class="from-control rounded-lg w-full" value=<?=$rs['amount']?> >
                     <label class="block text-white text-sm font-bold m-2">รูปภาพ :</label>
                     <img src="img/<?=$rs['image']?>" width="120">
-                    <input class="rounded-lg border-2 border-black w-full text-white mt-2 bg-black" type="file" name="fileupload" >
+                    <input class="rounded-lg border-2 bg-white w-full mt-2 bg-black" type="file" name="fileupload" >
                     <input type="hidden" name="textimg" class="from-control rounded-lg w-full" value=<?=$rs['image']?> >
 
 

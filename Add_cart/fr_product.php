@@ -15,7 +15,7 @@ include 'condb.php';
 <body>
 
     <div class="container mx-auto grid h-screen place-items-center">
-        <div class="row bg-black/75 rounded-lg p-20 w-6/12 drop-shadow-2xl">
+        <div class="row bg-black rounded-lg p-20 w-6/12 drop-shadow-2xl">
         <div class="text-center text-3xl rounded-lg text-white font-bold mb-6">
             เพิ่มข้อมูลสินค้า
         </div>
@@ -39,13 +39,13 @@ include 'condb.php';
                     </select>
                     <br>
                     <label class="block text-white text-sm font-bold m-2">รายละเอียด : </label>
-                    <textarea type="text" name="detail" class="from-control rounded-lg w-full" placeholder="รายละเอียด..." required></textarea> <br>
+                    <textarea type="text" name="detail" class="from-control rounded-lg w-full" placeholder="รายละเอียด..."></textarea> <br>
                     <label class="block text-white text-sm font-bold m-2">ราคา :</label>
                     <input type="text" name="price" class="from-control rounded-lg w-full" placeholder="ราคาสินค้า..." required> <br>
                     <label class="block text-white text-sm font-bold m-2">จำนวน :</label>
                     <input type="text" name="num" class="from-control rounded-lg w-full" placeholder="จำนวนสินค้า..." required> <br>
                     <label class="block text-white text-sm font-bold m-2">รูปภาพ :</label>
-                    <input class="rounded-lg border-2 border-black w-full text-white" type="file" name="fileupload" required>
+                    <input class="rounded-lg border-2 bg-white w-full" type="file" name="fileupload" required>
 
                     <div class="pt-4">
                     <button type="submit" value="submit" class="inline-block px-6 py-2 border-2 border-green-500 text-green-500 font-medium text-3xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">ยืนยัน</button>

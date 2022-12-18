@@ -9,12 +9,12 @@
 
 <body>
     
-  <nav class="p-5 shadow md:flex md:items-center md:justify-between bg-black relative sticky w-full">
+  <nav class="p-5 shadow md:flex md:items-center md:justify-center bg-black relative sticky w-full mb-4">
     <div class="flex justify-between items-center ">
       <span class="text-2xl font-[Poppins] cursor-pointer">
         <img class="h-10 inline"
           src="./img/LOGO.png">
-        tailwind
+        K-TOY
       </span>
 
       <span class="text-3xl cursor-pointer mx-2 md:hidden block bg-white ronded-lg">
@@ -27,7 +27,7 @@
         <a href="#" class="text-xl hover:text-rose-600 duration-500">HOME</a>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <a href="#" class="text-xl hover:text-rose-600 duration-500">PRODUCT</a>
+        <a href="show_product.php" class="text-xl hover:text-rose-600 duration-500">PRODUCT</a>
       </li>
       <li class="mx-4 my-6 md:my-0">
         <a href="#" class="text-xl hover:text-rose-600 duration-500">ABOUT</a>
@@ -39,13 +39,11 @@
         <a href="#" class="text-xl hover:text-rose-600 duration-500">BLOG'S</a>
       </li>
 
-     <form class="Search" method="POST" action="show_product.php">
+     <form class="Search flex" method="POST" action="show_product.php">
     <input class="rounded-full text-center text-black" type="search" name="keyword" placeholder="Search" class="...">
-    <button class="px-2 bg-rose-600 rounded-full" type="submit">ค้นหา</button>
+    <button class="px-2 bg-rose-600 rounded-full ml-2" type="submit">ค้นหา</button>
      </form>
-    
-<h2 class=""></h2>
-    </ul>
+
   </nav>
 
 

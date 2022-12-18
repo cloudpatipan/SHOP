@@ -40,7 +40,7 @@
       ?>
 
 
-        <div class="m-4 bg-black text-white object-fill w-64 min-h-[5-rem] shadow-lg rounded-lg overflow-hidden transition ease-in-out delay-150 bg-black hover:-translate-x-1 hover:scale-105 duration-300 overflow-visible">
+        <div class="m-4 bg-black text-white object-fill w-64 min-h-[5-rem] shadow-lg rounded-lg overflow-hidden transition ease-in-out delay-150 bg-black hover:-translate-x-1 hover:scale-105 duration-300">
           <img class="w-64 h-60 object-cover rounded-lg" src="img/<?=$row['image']?>" alt="">
 
             <div class="p-5 flex-col gap3">
