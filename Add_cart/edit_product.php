@@ -1,11 +1,12 @@
 <?php
 include 'condb.php';
+session_start();
+
 $idpro = $_GET['id'];
 $sql1 = "SELECT * FROM product WHERE pro_id='$idpro' ";
 $result = mysqli_query($conn,$sql1);
 $rs = mysqli_fetch_array($result);
 $p_typeID=$rs['type_id']; 
-
 
 ?>
 
@@ -28,12 +29,12 @@ $p_typeID=$rs['type_id'];
         </div>
                 <form name="form1" method="post" action="update_product.php" enctype="multipart/form-data">
                     <label class="block text-white text-l font-bold m-2">รหัสสินค้า :</label>
-                    <input type="text" name="proid" class="from-control rounded-lg w-full" readonly value=<?=$rs['pro_id']?> required>
+                    <input type="text" name="proid" class="from-control rounded-lg w-full" readonly value=<?=$rs['fname']?> required>
                     <label class="block text-white text-l font-bold m-2">ชื่อสินค้า :</label>
-                    <input name="pname" class="from-control rounded-lg w-full py-2 px-2" value=<?=$rs['pro_name']?> required>
+                    <input name="pname" class="from-control rounded-lg w-full py-2 px-2" value=<?=$rs['lname']?> required>
                     <label class="block text-white text-l font-bold m-2">ประเภทสินค้า :</label>
 
-                    <select class="form-select w-full rounded-lg py-2 px-2"  name="TypeID">
+                    <select class="form-select w-full rounded-lg py-2 px-2"  name="TypeIDf">
                     <?php
                     $sql="SELECT * FROM type ORDER BY type_name";
                     $hand=mysqli_query($conn,$sql);
@@ -62,7 +63,7 @@ $p_typeID=$rs['type_id'];
 
 
                     <div class="pt-4">
-                    <button type="submit" value="submit" class="inline-block px-6 py-2 border-2 border-green-500 text-green-500 font-medium text-3xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">อัพเดต</button>
+                    <button type="submit" class="inline-block px-6 py-2 border-2 border-green-500 text-green-500 font-medium text-3xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">อัพเดต</button>
                     <a class="inline-block px-6 py-2 border-2 border-red-600 text-red-600 font-medium text-3xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" href="show_product_list.php" role="button">ยกเลิก</a>
                     </div>
                 </form>
@@ -71,3 +72,5 @@ $p_typeID=$rs['type_id'];
 
 </body>
 </html>
+
+
